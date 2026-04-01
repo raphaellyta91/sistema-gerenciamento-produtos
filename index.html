@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1 class="titulo">🛒 Lista de Compras</h1>
+
+    <input type="text" id="item" placeholder="Digite o item">
+
+    <select id="categoria">
+        <option value="frutas">Frutas</option>
+        <option value="limpeza">Limpeza</option>
+        <option value="mercearia">Mercearia</option>
+    </select>
+
+    <button onclick="adicionarItem()">Adicionar</button>
+
+      <h2>Frutas</h2>
+      <ul id="frutas"></ul>
+
+      <h2>Limpeza</h2>
+      <ul id="limpeza"></ul>
+
+     <h2>Mercearia</h2>
+      <ul id="mercearia"></ul>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
