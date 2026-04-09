@@ -1,0 +1,52 @@
+
+body {
+    font-family: Arial;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.coluna {
+    background: white;
+    width: 250px;
+    min-height: 300px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.tarefa {
+    background: #ddd;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+.tarefa {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+}
+
+/* Prioridades */
+.alta {
+    background-color: #ff6b6b;
+}
+
+.media {
+    background-color: #feca57;
+}
+
+.baixa {
+    background-color: #1dd1a1;
+}

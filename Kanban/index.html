@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Meu Kanban</h1>
+
+    <!-- Área de criação -->
+    <div class="topo">
+        <input type="text" id="titulo" placeholder="Título da tarefa">
+
+        <select id="prioridade">
+            <option value="alta">Alta</option>
+            <option value="media">Média</option>
+            <option value="baixa">Baixa</option>
+        </select>
+
+        <button onclick="adicionar()">Adicionar</button>
+        <button onclick="limpar()">Limpar</button>
+    </div>
+
+    <!-- Colunas -->
+    <div class="container">
+
+        <div class="coluna" id="afazer">
+            <h2>A fazer</h2>
+        </div>
+
+        <div class="coluna" id="fazendo">
+            <h2>Fazendo</h2>
+        </div>
+
+        <div class="coluna" id="feito">
+            <h2>Feito</h2>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
