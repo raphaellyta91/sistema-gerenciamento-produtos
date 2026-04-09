@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Projetos - Rafaela Costa</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+            color: #1e293b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+
+        .subtitulo {
+            margin-bottom: 30px;
+            color: #475569;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            width: 220px;
+            transition: 0.3s;
+            text-decoration: none;
+            color: #1e293b;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: #f8fafc;
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🚀 Meus Projetos</h1>
+        <p class="subtitulo">Testem e me dêem um retorno 😊</p>
+
+        <div class="cards">
+            <a href="Kanban/" class="card">
+                <h2>📌 Kanban</h2>
+                <p>Organizador de tarefas estilo quadro.</p>
+            </a>
+
+            <a href="Mercado/" class="card">
+                <h2>🛒 Mercado</h2>
+                <p>Lista de compras com armazenamento.</p>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
