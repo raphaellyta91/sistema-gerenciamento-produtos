@@ -9,6 +9,14 @@
 <input type="text" id="nome" placeholder="Nome"><br><br>
 <input type="text" id="cpf" placeholder="Cpf"><br><br>
 <input type="text" id="email" placeholder="Email"><br><br>
+
+<input type="text" id="cep" placeholder="CEP" onblur="buscarCEP()"><br><br>
+<input type="text" id="logradouro" placeholder="Logradouro (Rua, Av...)"><br><br>
+<input type="text" id="bairro" placeholder="Bairro"><br><br>
+<input type="text" id="cidade" placeholder="Cidade"><br><br>
+<input type="text" id="estado" placeholder="Estado"><br><br>
+<input type="text" id="numero" placeholder="Número"><br><br>
+
 <input type="password" id="password" placeholder="password"><br><br>
 
 <button onclick="cadastrar()">Cadastrar</button>
@@ -20,12 +28,55 @@ function cadastrar() {
     let email = document.getElementById("email").value;
     let senha = document.getElementById("password").value;
 
+    let cep = document.getElementById("cep").value;
+    let logradouro = document.getElementById("logradouro").value;
+    let bairro = document.getElementById("bairro").value;
+    let cidade = document.getElementById("cidade").value;
+    let estado = document.getElementById("estado").value;
+    let numero = document.getElementById("numero").value;
+
+    localStorage.setItem("nome", nome);
+    localStorage.setItem("cpf", cpf);
     localStorage.setItem("email", email);
     localStorage.setItem("password", senha);
+    localStorage.setItem("cep", cep);
+    localStorage.setItem("logradouro", logradouro);
+    localStorage.setItem("bairro", bairro);
+    localStorage.setItem("cidade", cidade);
+    localStorage.setItem("estado", estado);
+    localStorage.setItem("numero", numero);
 
     alert("Cadastro realizado com sucesso!");
-
     window.location.href = "login.html";
+}
+
+function buscarCEP() {
+    let cep = document.getElementById("cep").value;
+
+    cep = cep.replace(/\D/g, "");
+
+    if (cep.length !== 8) {
+        alert("Digite um CEP válido com 8 números.");
+        return;
+    }
+
+    fetch("https://viacep.com.br/ws/" + cep + "/json/")
+        .then(response => response.json())
+        .then(dados => {
+            if (dados.erro) {
+                alert("CEP não encontrado.");
+                return;
+            }
+
+            document.getElementById("logradouro").value = dados.logradouro;
+            document.getElementById("bairro").value = dados.bairro;
+            document.getElementById("cidade").value = dados.localidade;
+            document.getElementById("estado").value = dados.uf;
+        })
+        .catch(error => {
+            alert("Erro ao buscar CEP.");
+            console.error(error);
+        });
 }
 </script>
 
