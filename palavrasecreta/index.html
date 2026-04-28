@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Enforca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Palavra Secreta</h1>
+
+        <p id="dica">Dica: </p>
+
+        <h2 id="palavra"></h2>
+
+        <input type="text" id="letra" maxlength="1" placeholder="Digite uma letra">
+
+        <button onclick="chutarLetra()">Chutar</button>
+        <button onclick="reiniciarJogo()">Reiniciar</button>
+
+        <p id="tentativas"></p>
+        <p id="letrasUsadas"></p>
+        <p id="mensagem"></p>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
